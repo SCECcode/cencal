@@ -9,6 +9,11 @@ import getopt
 import sys
 import subprocess
 
+if sys.version_info.major >= (3) :
+  from urllib.request import urlopen
+else:
+  from urllib2 import urlopen
+
 model = "CENCAL"
 
 def usage():
